@@ -18,7 +18,7 @@ else
     REPO="libDrive/libDrive"
 fi
 
-curl -L -s $(curl -s "https://api.github.com/repos/${REPO}/releases/${VER}" | grep -Po '"browser_download_url": "\K.*?(?=")') | tar xf - -C .
+curl -L -s $(curl -s "https://github.com/libDrive/libDrive/releases/download/v1.3.1/libDrive.Server.v1.3.1.tar" | grep -Po '"browser_download_url": "\K.*?(?=")') | tar xf - -C .
 
 pip3 install -r requirements.txt -q --no-cache-dir
 
